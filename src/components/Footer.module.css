@@ -1,0 +1,16 @@
+.container{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+}
+
+.container p span{
+    color: #61dafb;
+    font-weight: bold;
+}
+
+.container p{
+    color: white
+}

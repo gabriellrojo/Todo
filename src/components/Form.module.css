@@ -1,0 +1,14 @@
+.form{
+    min-width: 40vw;
+    margin: 20px 0
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.input{
+    padding: 10px;
+}
+

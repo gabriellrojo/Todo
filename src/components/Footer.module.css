@@ -1,9 +1,10 @@
 .container{
-    min-height: 20vh;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #282c34;
+    margin-top: 20px;
 }
 
 .container p span{

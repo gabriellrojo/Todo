@@ -1,0 +1,22 @@
+.background{
+    min-height: 105.5vh;
+    min-width: 100vw;
+    position: absolute;
+    background-color: black;
+    opacity: 0.3;
+    
+
+}
+
+.container{
+    width: 40vw;
+    height: 30vw;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    padding: 20px
+    
+}

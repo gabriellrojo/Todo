@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import styles from './Modal.module.css'
-import { ITask } from '../interface/task'
 
 type Props = {
     form: React.ReactNode 

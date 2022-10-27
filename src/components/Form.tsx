@@ -6,29 +6,46 @@ type Props = {
     btnText: string
     taskList: Array<ITask>
     setTaskList: React.Dispatch<React.SetStateAction<Array<ITask>>>
-    taskToUpdate: ITask | null
+    taskToUpdate?: ITask | null
+    handleUpdate?: Function
 }
 
-const Form = ({btnText, taskList, setTaskList, taskToUpdate}: Props) => {
+const Form = ({btnText, taskList, setTaskList, taskToUpdate, handleUpdate}: Props) => {
     const [id, setId] = useState<number>(0)
     const [title, setTitle] = useState<string>("")
     const [difficulty, setDifficulty] = useState<number>(0)
 
     const handleSumbit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        const id = Math.floor(Math.random()*100)
-        
-        const task: ITask = {
-            id: id,
-            task: title,
-            difficulty: difficulty
-        }
 
-        setTaskList([...taskList, task])
-        console.log(taskList)
+        if(handleUpdate){
+
+            e.preventDefault()
+            const updatedTask = {
+                id: id,
+                task: title,
+                difficulty: difficulty
+            }
+
+            handleUpdate(updatedTask)
+
+        } else {
+
+            e.preventDefault()
+            const id = Math.floor(Math.random()*100)
+        
+            const task: ITask = {
+                id: id,
+                task: title,
+                difficulty: difficulty
+            }
+
+            setTaskList([...taskList, task])
+
+        }
+        
        
     }
-
+    
     useEffect(() => {
         if(taskToUpdate){
             setId(taskToUpdate.id)
@@ -36,7 +53,6 @@ const Form = ({btnText, taskList, setTaskList, taskToUpdate}: Props) => {
             setDifficulty(taskToUpdate.difficulty)
         }
     },[taskToUpdate])
-  
     return (
     <div>
         <form onSubmit={handleSumbit} className={styles.form}>

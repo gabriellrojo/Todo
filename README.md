@@ -12,6 +12,4 @@ Projeto frontend utilizando React com Typescript que tem por finalidade oferecer
 
 Aplicar os conhecimentos de Typescript ao React de modo que o usuário possa cadastrar tarefas de sua escolhe e gerencia-las através da edição - através de um modal - ou exclusão das mesmas.
 
-# Deploy
-
 
